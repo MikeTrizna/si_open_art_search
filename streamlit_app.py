@@ -45,13 +45,13 @@ def art_annoy_search(mode, query, k=5):
                                             include_distances=True)
     return neighbors
 
-#DEPLOY_MODE = 'streamlit_share'
-DEPLOY_MODE = 'localhost'
+DEPLOY_MODE = 'streamlit_share'
+#DEPLOY_MODE = 'localhost'
 
 if DEPLOY_MODE == 'localhost':
     BASE_URL = 'http://localhost:8501/'
 elif DEPLOY_MODE == 'streamlit_share':
-    BASE_URL = 'https://share.streamlit.io/miketrizna/bhl_flickr_search'
+    BASE_URL = 'https://share.streamlit.io/miketrizna/si_open_art_search'
 
 if __name__ == "__main__":
     st.markdown("# Smithsonian Open Access Art Search")
