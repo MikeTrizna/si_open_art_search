@@ -127,7 +127,7 @@ if __name__ == "__main__":
                 col_list[idx%cols].markdown(f"*{art_info['title']}*")
                 col_list[idx%cols].markdown(f"from {art_info['unitCode']}")
                 neighbors_url = f"{BASE_URL}?mode=edan_id&query={art_info['id']}"
-                link_html = f'<a href="{si_url}" target="_blank">SI Collections Link</a> | <a href="{neighbors_url}">🧑🏽‍🤝‍🧑🏽 Neighbors</a>'
+                link_html = f'📎<a href="{si_url}" target="_blank">SI Record Link</a> | 🖇️<a href="{neighbors_url}">Nearest Neighbors</a>'
                 col_list[idx%cols].markdown(link_html, unsafe_allow_html=True)
                 col_list[idx%cols].markdown("---")
 
