@@ -78,7 +78,7 @@ if __name__ == "__main__":
     art_records = load_file_data()
 
     if app_mode == 'Text search':
-        search_text = 'a watercolor illustration of an insect with flowers'
+        search_text = 'a watercolor painting of a landscape with mountains'
         if 'mode' in query_params:
             if query_params['mode'][0] == 'text_search':
                 if 'query' in query_params:
