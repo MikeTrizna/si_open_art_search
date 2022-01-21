@@ -12,22 +12,23 @@ st.set_page_config(
      layout="wide"
 )
 
-@st.cache(allow_output_mutation=True)
+@st.experimental_singleton
 def load_clip_model():
     return SentenceTransformer('clip-ViT-B-32')
 
-@st.cache(allow_output_mutation=True)
+@st.experimental_singleton
 def load_annoy_index():
     annoy_index = AnnoyIndex(512, metric='angular')
     annoy_index.load('art_index.annoy')
     return annoy_index
 
-@st.cache(allow_output_mutation=True)
+@st.experimental_singleton
 def load_file_data():
     with open('art_file_info.json') as json_in:
         art_file_info = json.load(json_in)
     return art_file_info
 
+@st.experimental_memo
 def art_annoy_search(mode, query, k=5):
     if mode == 'id':
         for idx, row in enumerate(art_records):
