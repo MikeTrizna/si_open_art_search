@@ -1,0 +1,3 @@
+This is a web app that I built to help find an artwork to print for my son's nursery.
+
+I downloaded all items from the Smithsonian Open Access daatabase of object type "paintings", "drawings", or "prints", and produced a neural network embedding for each using the Open AI Clip Model. This model is special in that it was trained on a dataset of images and text captions, which means that you can compare text descriptions to the database of artwork and find top matches. I used Spotify's Annoy library for doing very quick searches of the vector database. It uses the Streamlit framework to put a front-end on my Python code.
