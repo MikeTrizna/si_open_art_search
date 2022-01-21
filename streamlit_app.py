@@ -87,6 +87,10 @@ if __name__ == "__main__":
                 st.experimental_set_query_params()
         query = st.text_input('Text query',search_text) 
         search_mode = 'text'
+        st.markdown('**Do you want to share these search results? Copy/paste the URL below:**')
+        encoded_text = urllib.parse.quote_plus(query)
+        share_url = f'{BASE_URL}?mode=text_search&query={encoded_text}'
+        st.code(share_url)
         #closest_k_idx, closest_k_dist = bhl_text_search(text_query, 100)
 
     elif app_mode == 'EDAN ID':
