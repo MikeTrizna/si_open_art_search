@@ -28,7 +28,6 @@ def load_file_data():
         art_file_info = json.load(json_in)
     return art_file_info
 
-@st.experimental_memo
 def art_annoy_search(mode, query, k=5):
     if mode == 'id':
         for idx, row in enumerate(art_records):
